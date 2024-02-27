@@ -1,208 +1,181 @@
 \chapter{Prezentacja warstwy użytkowej}
-Projekt systemu zarządzania kontem klienta jest zrealizowany jako aplikacja konsolowa. To znaczy że logika jak i działanie programu jest napisane w języku C\#. Program nie posiada dodatkowego interfejsu graficznego a obsługuje się go za pomocą klawiszy z klawiatury. 
+Projekt kuchenki mikrofalowej jest zrealizowany jako aplikacja konsolowa. Napisane w języku C\#. Program obsługuje się za pomocą klawiatury w konsoli systemowej. 
 Przedstawiam zrzuty ekranu pokazujące działanie programu.
 
 \section{Ekran powitalny}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{EkranPow.png}
-      \caption{Wybór wyświetlania klienta lub usług}
+    \includegraphics[width=0.9\textwidth]{EkranPowitalny.png}
+      \caption{Lista możliwych interakcji}
     \label{fig:example}
 \end{figure}
 
-Po uruchomieniu programu w konsoli pokazuje się ekran powitalny z nazwą programu i możliwością przejścia do zakładki klienci lub usługi jest też możliwość zakończenia programu. 
+Po uruchomieniu programu pojawia nam się menu z listą możliwych wyborów.
 
 \newpage
 
-\section{Zarządzanie Klientami}
+\section{Rozpoczęcie podgrzewania}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{ZarządzanieKlientami.png}
-      \caption{Wybór operacji na koncie klienta}
+    \includegraphics[width=0.9\textwidth]{Menu1.png}
+      \caption{Wyświetla listę produktów które można podgrzać}
     \label{fig:example}
 \end{figure}
 
-Po przejściu do zakładki klientckiej pokazuje się ekran powitalny z menu wyboru odpowiedniej operacji. 
+Po wejściu w menu produktów do podgrzania trzeba podać czas podgrzewania oraz potwierdzić rozpoczęcie. 
 
-\subsection{Wyświetlanie informacji o klientach}
+\subsection{Zakończenie podgrzewania}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{WysInf.png}
-      \caption{Wprowadzanie ID klienta}
+    \includegraphics[width=0.9\textwidth]{Menu2.png}
+      \caption{Menu po zakończeniu podgrzewania}
     \label{fig:example}
 \end{figure}
 
-Wybierając opcję wyświetlenia informacji o kliencie program poprosi o podanie ID klienta którego chcemy wyświetlić.
-
-\subsubsection{Wybór odpowiedniego klienta}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{WysInf1.png}
-      \caption{Przedstawienie danych klienta}
-    \label{fig:example}
-\end{figure}
-
-Po wybraniu odpowiedniego klienta zostaną wyświetlone wszystkie dane pobrane z bazy danych. 
-
-\subsubsection{Wybór klienta którego nie ma w systemie}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{WysInfBrak.png}
-      \caption{Brak klienta o wybranym ID}
-    \label{fig:example}
-\end{figure}
-
-Jeśli zostanie wybrany klient którego nie ma w systemie program zwróci odpowiednią informację i będziemy mieć możliwość wyszukać ponownie klienta. 
+Po zakończeniu podgrzewania program zwraca nam informację, czy jedzenie jest dobrze przygotowane, czy coś poszło nie tak.
 
 \newpage
 
-\subsection{Dodawanie klienta}
-
-
+\subsection{Historia podgrzewania}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{DodawanieKlienta.png}
-      \caption{Możliwość dodania nowego klienta}
+    \includegraphics[width=0.9\textwidth]{Menu3.png}
+      \caption{Historia}
     \label{fig:example}
 \end{figure}
 
-Wybierając opcje dodania klienta system poprosi nas o wpisanie wszystkich wartości potrzebnych żeby dodać klienta do systemu. 
+Po wybraniu pozycji numer 2 wyświetla nam się historia podgrzewania z informacjami o produkcie, czasie podgrzewania i jakości jedzenia. 
 
-\subsubsection{Dodanie klienta dane wprowadzone poprawnie}
+\subsection{Wyświetlanie listy produktów}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{DodawanieKlientaPop.png}
-      \caption{Dodanie klienta do systemu}
+    \includegraphics[width=0.9\textwidth]{Menu4.png}
+      \caption{Lista produktów}
     \label{fig:example}
 \end{figure}
 
-Po wpisaniu poprawnych danych klient zostanie dodany do systemu automatycznie zostanie mu nadany kolejny numer id.
-\newpage
-\subsubsection{Dodanie klienta dane wprowadzone błędnie}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{DodawanieKlientaBle.png}
-      \caption{Błąd dodania klienta do systemu}
-    \label{fig:example}
-\end{figure}
-
-Dodając klienta możemy pomylić się w wielu miejscach dlatego program pozwoli nam przejść dalej lub ponowi możliwość wpisania danej wartości jeśli w miejsce wymagane zostanie wpisana pusta wartość program przejdzie dalej niestety dodawanie zakończy sie niepowodzeniem i trzeba będzie powtórzyć jednak jeśli ktoś się pomyli podczas wpisywania numeru telefonu wpisze więcej cyfr lub doda niedozwolony znak program poprosi go o ponowne wpisanie danej wartości. 
-
-\subsection{Aktualizowanie danych klienta}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{AktualizacjaDanych.png}
-      \caption{Możliwość aktualizacji błędnych danych}
-    \label{fig:example}
-\end{figure}
-
-Wybierając opcję aktualizacji danych kliencie program poprosi o podanie ID klienta którego chcemy wyświetlić.
-
-\subsubsection{Aktualizowanie danych klienta dane wprowadzone poprawnie}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{AktualizacjaDanychPop.png}
-      \caption{Możliwość aktualizacji błędnych danych}
-    \label{fig:example}
-\end{figure}
-
-Po wybraniu klienta którego dane chcemy zaktualizować dostajemy podgląd na dane jakie aktualnie posiada klient i na ich podstawie może wpisać poprawione informacje. 
-
-\subsubsection{Aktualizowanie danych klienta dane wprowadzone błędnie}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{AktualizacjaDanychNeg.png}
-      \caption{Możliwość aktualizacji błędnych danych}
-    \label{fig:example}
-\end{figure}
-
-Program wykrywa dane które się nie zgadzają nie przedstawia błędu nie prosi też o wpisanie ponownie danej wartości dopiero pod koniec przekazuje że dane nie zostały zaktualizowane i pokazuje błąd. Użytkownik musi od nowa aktualizować dane tym razem bez błędu. 
-
-\subsubsection{Weryfikacja zaktualizowanych danych}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{AktualizacjaDanychWer.png}
-      \caption{Weryfikacja danych klienta}
-    \label{fig:example}
-\end{figure}
-
-Dane klienta zostały zaktualizowane podczas poprawnego wprowadzenia wartości do systemu za to drugim razem po wykonaniu błędu system już nie zmienił wartości. 
-
-\subsection{Usuwanie danych klienta}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{UsuwanieKlienta.png}
-      \caption{Możliwość usuwania klienta z systemu}
-    \label{fig:example}
-\end{figure}
-
-Wybierając opcję usuwania informacji o kliencie program poprosi o podanie ID klienta którego chcemy usunąć.
-
-\subsubsection{Weryfikacja usuniętych danych klienta}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{PotwierdzenieUsu.png}
-      \caption{Potwierdzenie usunięcia}
-    \label{fig:example}
-\end{figure}
-
-\section{Zarządzanie Usługami}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{ZarzadUslug.png}
-      \caption{Prezentacja opcji w usługach}
-    \label{fig:example}
-\end{figure}
-Po przejściu do zakładki z usługami pokazuje się ekran powitalny z menu wyboru odpowiedniej operacji. 
-
-\subsection{Wyświetlanie informacji o usługach}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{WysInfUslug.png}
-      \caption{Przedstawienie danych usługi}
-    \label{fig:example}
-\end{figure}
-
-Wybierając opcję wyświetlenia informacji o usługacg program poprosi o podanie ID klienta którego chcemy wyświetlić.
-
-\subsection{Dodawanie usług}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{DodawanieUslug.png}
-      \caption{Dodanie usługi do systemu}
-    \label{fig:example}
-\end{figure}
+Po wybraniu numeru 3 wyświetli nam się lista dostępnych produktów. 
 
 \newpage
-Wybierając opcje dodania usługi system poprosi nas o wpisanie wszystkich potrzebnych danych.
 
-\subsection{Aktualizacja danych w usługach}
+\subsection{Zarządzanie produktami}
+
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{AktualizacjaDanychUslug.png}
-      \caption{Zaktualizowanie danych o usłudze}
+    \includegraphics[width=0.9\textwidth]{Menu5.png}
+      \caption{Menu zarządzania}
     \label{fig:example}
 \end{figure}
 
-Po wybraniu usługi którą chcemy zaktualizować dostajemy podgląd i na jego podstawie może wpisać poprawione informacje. 
+Po wybraniu numeru 4 mamy dostęp do zarządzania listą produktów, możemy dodać, usunąć lub edytować pozycje.
 
-
-
-\subsection{Usuwanie usług}
+\subsection{Dodanie produktu}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{UsuwanieUslug.png}
-      \caption{Usunięcie usługi}
+    \includegraphics[width=0.9\textwidth]{Menu6.png}
+      \caption{Dodanie produktu do systemu}
     \label{fig:example}
 \end{figure}
 
-Wybierając opcję usuwania informacji o usłudze program poprosi o podanie ID dzięki niemu może odnaleźć usługę do usunięcia.
+Produkt został pomyślnie dodany do bazy.
+
+\newpage
+\subsubsection{Błąd przy dodawaniu produktu}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Menu7.png}
+      \caption{Błąd dodania, nazwa pusta}
+    \label{fig:example}
+\end{figure}
+
+Przy dodawaniu produktu nazwa nie może być pusta.
+
+\subsubsection{Błąd przy dodawaniu produktu}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Menu8.png}
+      \caption{Błąd dodania, czas ujemny}
+    \label{fig:example}
+\end{figure}
+
+Przy dodawaniu produktu czas podgrzewania nie może być równy 0 lub ujemny.
+
+\newpage
+
+\subsection{Aktualizowanie produktu}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Menu9.png}
+      \caption{Aktualizacja produktu pomyślna}
+    \label{fig:example}
+\end{figure}
+
+Aktualizując produkt możemy zmienić jego nazwę lub czas podgrzewania.
+
+\subsubsection{Błędna aktualizacja produktu}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Menu10.png}
+      \caption{Błąd, pusta nazwa}
+    \label{fig:example}
+\end{figure}
+
+Przy aktualizacji, tak samo jak przy dodawaniu program sprawdza czy nazwa jest pusta oraz czas podgrzewania dodatni.
+\newpage
+\subsection{Czyszczenie historii podgrzewania}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Menu11.png}
+      \caption{Historia została wyczyszczona}
+    \label{fig:example}
+\end{figure}
+
+Program pozwala na wyczyszczenie historii podgrzewania.
+
+\subsection{Wymóg czyszczenia mikrofalówki}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Menu12.png}
+      \caption{Mikrofalówka wymaga czyczszczenia}
+    \label{fig:example}
+\end{figure}
+
+Po 5 użyciach mikrofalówka wymaga czyszczenia, aby nadal móc jej używać.
+\newpage
+\subsubsection{Czyszczenie mikrofalówki}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Menu13.png}
+      \caption{Mikrofalówka wyczyszczona}
+    \label{fig:example}
+\end{figure}
+
+Po wybraniu opcji numer 6 mikrofalówka zostaje wyczyszczona i można znów ją używać.
+
+\subsection{Diagnostyka}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Menu14.png}
+      \caption{Diagnostyka pomyślna}
+    \label{fig:example}
+\end{figure}
+
+Po wybraniu opcji numer 7 mikrofalówka przeprowadza diagnostykę, może ona zakończyć się pomyślnie lub znaleźć błąd.
+\newpage
+\subsubsection{Diagnostyka wykryła błąd}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Menu15.png}
+      \caption{Błąd grzałki}
+    \label{fig:example}
+\end{figure}
+Po wykryciu błędu można spróbować go naprawić, po czym zostaje podjęta próba naprawy.

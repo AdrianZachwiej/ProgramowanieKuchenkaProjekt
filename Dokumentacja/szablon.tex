@@ -1,0 +1,61 @@
+% **** Szablon pracy magisterskiej, licencjackiej lub inżynierskiej ****
+
+\documentclass[polish,12pt,twoside,a4paper]{report}
+
+\input{style.tex}
+
+%definicja przydatnych poleceń
+\newcommand{\wydzial}{KOLEGIUM INFORMATYKI STOSOWANEJ}
+\newcommand{\kierunek}{Kierunek: INFORMATYKA}
+\newcommand{\specjalnosc}{Specjalność: Programowanie}
+\newcommand{\autor}{Adrian Zachwiej}
+\newcommand{\album}{Nr albumu studenta w56233}
+\newcommand{\temat}{Program Kuchenka Mikrofalowa}
+\newcommand{\promotor}{mgr inż. Ewa Żesławska}
+\newcommand{\typpracy}{Projekt}
+\newcommand{\miasto}{Rzeszów}
+\newcommand{\rok}{2024}
+
+\begin{document}
+
+% *************** Włączenie definicji pierwszych stron ***************
+\input{front.tex}
+
+
+% *************** Część główna pracy ***************
+\input{wstep.tex}
+\addcontentsline{toc}{chapter}{Wstęp}
+\newpage
+\input{R0.tex}
+\newpage
+\input{R1.tex}
+\newpage
+\input{R2.tex}
+\newpage
+\input{R3.tex}
+\newpage
+\input{R4.tex}
+\newpage
+\input{R5.tex}
+\newpage
+\input{R6.tex}
+\newpage
+
+% *************** Bibliografia ***************
+\begin{thebibliography}{6}
+\addcontentsline{toc}{chapter}{Bibliografia}
+%dodanie wpisu do spisu bibliograficznego
+
+\bibitem{www-1} https://pl.wikipedia.org/wiki/C\_Sharp z dnia 08.02.2024
+\bibitem{www-2} https://learn.microsoft.com/pl-pl/dotnet/csharp/ z dnia 07.02.2024
+
+\bibitem{etykieta1}Jesse Liberty, Ian Griffiths, Matthew E. Adams, {\it C\#. Programowanie}, Helion,  2005.
+\bibitem{etykieta2}Andrew Stellman, Jennifer Greene, {\it Head First C\# (Head First)}, Helion,  2009.
+\end{thebibliography}
+\newpage
+
+% *************** Zakończenie ***************
+\input{back.tex}
+
+\end{document}
+% *************** Koniec pliku szablon.tex ***************
